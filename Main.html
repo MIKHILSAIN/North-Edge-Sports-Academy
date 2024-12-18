@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Edge Sports Academy</title>
+    <link rel="icon" href="images.jpeg" type="image/jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script> <!-- SheetJS library -->
+</head>
+<body>
+    <form id="dataForm">
+        <table>
+            <tr>
+                <td><label>Name:</label></td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td><label>Batch Type:</label></td>
+                <td><input type="text" name="batchType" id="batchType"></td>
+            </tr>
+            <tr>
+                <td><label>Date:</label></td>
+                <td><input type="date" id="date" name="date"></td>
+            </tr>
+            <tr>
+                <td><label>Time of Day:</label></td>
+                <td>
+                    <select name="timeOfDay" id="timeOfDay">
+                        <option>Morning</option>
+                        <option>Evening</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Coaching:</label></td>
+                <td>
+                    <select name="coaching" id="coaching">
+                        <option>3:00 PM - 4:00 PM</option>
+                        <option>4:00 PM - 5:00 PM</option>
+                        <option>5:00 PM - 6:00 PM</option>
+                        <option>4:30 PM - 5:30 PM</option>
+                        <option>5:30 PM - 6:30 PM</option>
+                        <option>6:00 PM - 7:00 PM</option>
+                        <option>NA</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Subscription Type:</label></td>
+                <td><input type="text" name="subscriptionType" id="subscriptionType"></td>
+            </tr>
+            <tr>
+                <td><label>Amount:</label></td>
+                <td><input type="number" name="amount" id="amount"></td>
+            </tr>
+            <tr>
+                <td><label>Payment Mode:</label></td>
+                <td>
+                    <select name="paymentMode" id="paymentMode">
+                        <option>Cash</option>
+                        <option>Credit/Debit Card</option>
+                        <option>UPI (PhonePe, GPay)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Payment Duration (in days):</label></td>
+                <td><input type="number" name="paymentDuration" id="paymentDuration"></td>
+            </tr>
+            <tr>
+                <td><label>Receiver:</label></td>
+                <td><input type="text" name="receiver" id="receiver"></td>
+            </tr>
+            <tr>
+                <td><label>Remarks:</label></td>
+                <td><input type="text" name="remarks" id="remarks"></td>
+            </tr>
+        </table>
+        <div class="form-buttons">
+            <button type="button" id="addRow">Add Row</button>
+            <button type="button" id="exportExcel">Export to Excel</button>
+            <button type="button" id="clearTable">Clear Table</button>
+        </div>
+    </form>
+    <table id="dataTable" border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Batch Type</th>
+                <th>Date</th>
+                <th>Time of Day</th>
+                <th>Coaching</th>
+                <th>Subscription Type</th>
+                <th>Amount</th>
+                <th>Payment Mode</th>
+                <th>Payment Duration</th>
+                <th>Receiver</th>
+                <th>Remarks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
